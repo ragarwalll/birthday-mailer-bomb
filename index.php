@@ -20,18 +20,10 @@ if(isset($_POST['submit'])){
     $text=explode(" ", $text);
     for($i=0;$i<count($text);$i++){
         $j=$i;
-        if($j>10 && $j<21){
-            $j=$j-10;
+        if($j>10){
+            $j=$j%10;
         }
-        if($j>20 && $j<31){
-            $j=$j-20;
-        }
-        if($j>30 && $j<41){
-            $j=$j-30;
-        }
-        if($j>40 && $j<51){
-            $j=$j-40;
-        }
+        
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         $subject="[Happy Birthday]";
